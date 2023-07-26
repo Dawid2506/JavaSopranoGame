@@ -14,7 +14,7 @@ public class Player extends Entity {
     private String imgFolder = "player/patryk/";
     private int characterWidth;
     private String playerState = "player";
-
+//helloGit
 
     public Player(GamePanel gp, KeyHandler keyH) {
         this.gp = gp;
