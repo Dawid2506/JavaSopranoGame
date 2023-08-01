@@ -47,9 +47,6 @@ public class KeyHandler implements KeyListener {
         if(keyChar == 'E' || keyChar == 'e'){
             eTyped = true;
         }
-        if(keyChar == 'F' || keyChar == 'f'){
-            fTyped = true;
-        }
     }
 
 
@@ -70,6 +67,9 @@ public class KeyHandler implements KeyListener {
         if(code == KeyEvent.VK_D){
             rightPressed = true;
         }
+        if(code == 'F' || code == 'f' || code == KeyEvent.VK_F){
+            fTyped = true;
+        }
     }
 
     @Override
@@ -87,6 +87,9 @@ public class KeyHandler implements KeyListener {
         }
         if(code == KeyEvent.VK_D){
             rightPressed = false;
+        }
+        if(code == 'F' || code == 'f' || code == KeyEvent.VK_F){
+            fTyped = false;
         }
     }
 

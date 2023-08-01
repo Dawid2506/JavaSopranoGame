@@ -14,7 +14,7 @@ public class Player extends Entity {
     private String imgFolder = "player/patryk/";
     private int characterWidth;
     private String playerState = "player";
-//helloGit
+    private String playerMap = "parking";
 
     public Player(GamePanel gp, KeyHandler keyH) {
         this.gp = gp;
@@ -31,12 +31,23 @@ public class Player extends Entity {
     public void setDefaultValues(){
         x = 100;
         y = 100;
-        speed = 2;
+        //default == 2
+        speed = 5;
         direction = "right";
     }
 
-    public void changeMap(){
+    public void goInside(){
         gp.setCurrentMap("interior");
+        playerMap = "interior";
+        x = 100;
+        y = 100;
+    }
+
+    public void goOutside(){
+        gp.setCurrentMap("parking");
+        playerMap = "parking";
+        x = 100;
+        y = 100;
     }
 
     public void getCar(){
@@ -104,11 +115,25 @@ public class Player extends Entity {
 
             keyH.seteTyped(false);
         }
-        if(keyH.isfTyped()){
-            if((14*gp.getTileSize()<x && x<16*gp.getTileSize()) && (8*gp.getTileSize()<y && y<10*gp.getTileSize())){
-                changeMap();
+
+        if(playerMap.equals("parking")){
+            if(keyH.isfTyped()){
+                if((13*gp.getTileSize()<x && x<15*gp.getTileSize()) && (7*gp.getTileSize()<y && y<9*gp.getTileSize())){
+                    goInside();
+                }
             }
         }
+        else if(playerMap.equals("interior")){
+            if(keyH.isfTyped()){
+                if(0<x && x<gp.getTileSize() && 0<y && y<gp.getTileSize()){
+                    goOutside();
+                }
+            }
+        }
+
+
+
+
 
 
         if(keyH.isUpPressed() || keyH.isDownPressed() || keyH.isLeftPressed() || keyH.isRightPressed()){
@@ -134,42 +159,15 @@ public class Player extends Entity {
 
         BufferedImage image = null;
 
-        switch (direction) {
-            case "up":
-                if(spriteNum == 1){
-                    image = up1;
-                }
-                if(spriteNum == 2){
-                    image =up2;
-                }
-                break;
-            case "down":
-                if(spriteNum == 1){
-                    image = down1;
-                }
-                if(spriteNum == 2){
-                    image = down2;
-                }
-                break;
-            case "left":
-                if(spriteNum == 1){
-                    image = left1;
-                }
-                if(spriteNum == 2){
-                    image = left2;
-                }
-                break;
-            case "right":
-                if(spriteNum == 1){
-                    image = right1;
-                }
-                if(spriteNum == 2){
-                    image = right2;
-                }
-                break;
-        }
+        image = switch (direction) {
+            case "up" -> spriteNum == 1 ? up1 : up2;
+            case "down" -> spriteNum == 1 ? down1 : down2;
+            case "left" -> spriteNum == 1 ? left1 : left2;
+            case "right" -> spriteNum == 1 ? right1 : right2;
+            default -> null; // Provide a default value in case none of the cases match
+        };
         g2.drawImage(image, x, y, characterWidth, gp.getTileSize(), null);
-
+        //System.out.println("X:"+x+"     Y:"+y);
 
     }
 }
