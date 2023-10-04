@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GamePanel extends JPanel implements Runnable{
+    JLabel fridge;
+    private boolean fridgeState = false;
     private final int originalTileSize = 16;
     private final int scale = 3;
 
@@ -39,6 +41,7 @@ public class GamePanel extends JPanel implements Runnable{
         this.setDoubleBuffered(true);
         this.addKeyListener(keyH);
         this.setFocusable(true);
+
         startGameThread();
         player.setDefaultValues();
 
@@ -77,6 +80,14 @@ public class GamePanel extends JPanel implements Runnable{
         player.update();
     }
 
+    public boolean isFridgeState() {
+        return fridgeState;
+    }
+
+    public void setFridgeState(boolean fridgeState) {
+        this.fridgeState = fridgeState;
+    }
+
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
@@ -87,6 +98,9 @@ public class GamePanel extends JPanel implements Runnable{
             tileManager.drawInterior(g2);
         }
         player.draw(g2);
+        if(fridgeState == true){
+            player.openFridge.draw(g2);
+        }
         g2.dispose();
     }
 

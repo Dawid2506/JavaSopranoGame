@@ -1,5 +1,6 @@
 package entity;
 
+import Inventory.OpenFridge;
 import main.KeyHandler;
 import main.GamePanel;
 
@@ -11,6 +12,7 @@ import java.io.IOException;
 public class Player extends Entity {
     GamePanel gp;
     KeyHandler keyH;
+    public OpenFridge openFridge;
     private String imgFolder = "player/patryk/";
     private int characterWidth;
     private String playerState = "player";
@@ -36,21 +38,21 @@ public class Player extends Entity {
         direction = "right";
     }
 
-    public void goInside(){
+    private void goInside(){
         gp.setCurrentMap("interior");
         playerMap = "interior";
         x = 100;
         y = 100;
     }
 
-    public void goOutside(){
+    private void goOutside(){
         gp.setCurrentMap("parking");
         playerMap = "parking";
         x = 100;
         y = 100;
     }
 
-    public void getCar(){
+    private void getCar(){
         speed = 4;
         x = gp.getCarX();
         y = gp.getCarY();
@@ -60,7 +62,7 @@ public class Player extends Entity {
         playerState = "car";
     }
 
-    public void outCar(){
+    private void outCar(){
         speed = 2;
         imgFolder = "player/patryk/";
         getPlayerImage(imgFolder);
@@ -103,6 +105,9 @@ public class Player extends Entity {
             direction = "right";
             x += speed;
         }
+        if(keyH.isfTyped() && gp.isFridgeState() == true){
+            gp.setFridgeState(false);
+        }
         if(keyH.iseTyped()){
             if(playerState.equals("player")){
                 if((gp.getCarX()-40<x && x<gp.getCarX()+40) && (gp.getCarY()-40<y && y<gp.getCarY()+40)){
@@ -127,6 +132,15 @@ public class Player extends Entity {
             if(keyH.isfTyped()){
                 if(0<x && x<gp.getTileSize() && 0<y && y<gp.getTileSize()){
                     goOutside();
+                }
+            }
+        }
+        if(playerMap.equals("interior")){
+            if(keyH.isfTyped()){
+                if(x>140 && x<250 && y>30 && y<90){
+                    System.out.println("success");
+                    openFridge = new OpenFridge("silverLarge");
+                    gp.setFridgeState(true);
                 }
             }
         }
@@ -167,6 +181,7 @@ public class Player extends Entity {
             default -> null; // Provide a default value in case none of the cases match
         };
         g2.drawImage(image, x, y, characterWidth, gp.getTileSize(), null);
+
         //System.out.println("X:"+x+"     Y:"+y);
 
     }
