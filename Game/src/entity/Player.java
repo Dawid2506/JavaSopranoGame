@@ -1,6 +1,6 @@
 package entity;
 
-import Inventory.OpenFridge;
+import inventory.OpenFridge;
 import main.KeyHandler;
 import main.GamePanel;
 
@@ -105,9 +105,6 @@ public class Player extends Entity {
             direction = "right";
             x += speed;
         }
-        if(keyH.isfTyped() && gp.isFridgeState() == true){
-            gp.setFridgeState(false);
-        }
         if(keyH.iseTyped()){
             if(playerState.equals("player")){
                 if((gp.getCarX()-40<x && x<gp.getCarX()+40) && (gp.getCarY()-40<y && y<gp.getCarY()+40)){
@@ -135,15 +132,19 @@ public class Player extends Entity {
                 }
             }
         }
+        if(keyH.isfTyped()){
+            gp.setFridgeState(false);
+        }
         if(playerMap.equals("interior")){
             if(keyH.isfTyped()){
                 if(x>140 && x<250 && y>30 && y<90){
-                    System.out.println("success");
-                    openFridge = new OpenFridge("silverLarge");
-                    gp.setFridgeState(true);
+                        System.out.println("success");
+                        openFridge = new OpenFridge("silverLarge");
+                        gp.setFridgeState(true);
                 }
             }
         }
+
 
 
 

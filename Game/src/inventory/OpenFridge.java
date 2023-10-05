@@ -1,4 +1,4 @@
-package Inventory;
+package inventory;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -12,7 +12,7 @@ public class OpenFridge {
     public OpenFridge(String type) {
         this.Type = type;
         try {
-            silverLargeImg = ImageIO.read(getClass().getResourceAsStream("/inventory/freezerInventoryINWORK.png"));
+            silverLargeImg = ImageIO.read(getClass().getResourceAsStream("/inventory/silverLarge.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,7 +1,9 @@
 package main;
 
+import inventory.MainInventory;
 import entity.Player;
 import tile.TileManager;
+import inventory.MainInventory;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,6 +27,7 @@ public class GamePanel extends JPanel implements Runnable{
 
 
     KeyHandler keyH = new KeyHandler();
+    MainInventory mainInventory = new MainInventory();
 
 
 
@@ -101,6 +104,7 @@ public class GamePanel extends JPanel implements Runnable{
         if(fridgeState == true){
             player.openFridge.draw(g2);
         }
+        mainInventory.draw(g2);
         g2.dispose();
     }
 
