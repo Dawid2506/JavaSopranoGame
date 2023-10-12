@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "nzDcQna8jZrMVo1tOSL3g9gVlN5D0Hd0p38kxxUatJFFCbFGHJSLRiIglQdMG+RqLOBMOrD11vXheAx1EOKzOg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dawid\\Documents\\GitHub\\Dungeon-Breakers\\Dungeon Breakers Project\\Dungeon Breakers Project.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dawid\\.nuget\\packages\\godot.sourcegenerators\\4.1.2\\godot.sourcegenerators.4.1.2.nupkg.sha512",
+    "C:\\Users\\dawid\\.nuget\\packages\\godotsharp\\4.1.2\\godotsharp.4.1.2.nupkg.sha512",
+    "C:\\Users\\dawid\\.nuget\\packages\\godotsharpeditor\\4.1.2\\godotsharpeditor.4.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

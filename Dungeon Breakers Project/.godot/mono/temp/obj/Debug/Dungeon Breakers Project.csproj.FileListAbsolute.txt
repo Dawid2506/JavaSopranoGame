@@ -1,0 +1,17 @@
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\bin\Debug\Dungeon Breakers Project.deps.json
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\bin\Debug\Dungeon Breakers Project.runtimeconfig.json
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\bin\Debug\Dungeon Breakers Project.dll
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\bin\Debug\Dungeon Breakers Project.pdb
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\obj\Debug\Dungeon Breakers Project.csproj.AssemblyReference.cache
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\obj\Debug\Dungeon Breakers Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\obj\Debug\Dungeon Breakers Project.AssemblyInfoInputs.cache
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\obj\Debug\Dungeon Breakers Project.AssemblyInfo.cs
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\obj\Debug\Dungeon Breakers Project.csproj.CoreCompileInputs.cache
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\obj\Debug\Dungeon Breakers Project.csproj.CopyComplete
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\obj\Debug\Dungeon Breakers Project.dll
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\obj\Debug\refint\Dungeon Breakers Project.dll
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\obj\Debug\Dungeon Breakers Project.pdb
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\obj\Debug\Dungeon Breakers Project.genruntimeconfig.cache
+C:\Users\dawid\Documents\GitHub\Dungeon-Breakers\Dungeon Breakers Project\.godot\mono\temp\obj\Debug\ref\Dungeon Breakers Project.dll
